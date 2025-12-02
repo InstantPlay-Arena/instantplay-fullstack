@@ -1,6 +1,6 @@
 // Service d'authentification avec gestion JWT et localStorage
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001/api"
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080/api"
 
 export interface AuthResponse {
   token: string
@@ -79,7 +79,7 @@ export const login = async (payload: LoginPayload): Promise<AuthResponse> => {
 export const signup = async (payload: SignupPayload): Promise<AuthResponse> => {
   const { confirmPassword, ...signupData } = payload
 
-  const response = await fetch(`${API_BASE_URL}/auth/signup`, {
+  const response = await fetch(`${API_BASE_URL}/auth/register`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
