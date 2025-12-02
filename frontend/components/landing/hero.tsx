@@ -50,7 +50,7 @@ export function Hero() {
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-            <Link href="#games">
+            <Link href="/dashboard">
               <Button 
                 size="lg" 
                 variant="outline" 
